@@ -29,4 +29,12 @@ def get_details():
             to='+919940901332'
         )
         print(message.status)
+    else:
+        client = Client(account_sid, auth_token)
+        message = client.messages.create(
+            from_='+19204826193',
+            body="it wont rain today :)",
+            to='+919940901332'
+        )
+        print(message.status)
 get_details()
