@@ -23,8 +23,9 @@ jobs:
 
       - name: Check secrets are configured
         env:
-          MY_EMAIL: ${{ secrets.MY_EMAIL }}
-          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          API_KEY: ${{ secrets.API_KEY }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
         run: |
           if [ -z "$API_KEY" ]; then
             echo "API_KEY secret is not set!"
